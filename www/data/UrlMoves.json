@@ -1,0 +1,14 @@
+{
+	"moves":
+	[
+
+		{ "name":"img/iconPoppy/move1.png","primitive":"dance_snoop"},
+		{ "name":"img/iconPoppy/move2.png","primitive":"behave_macarena"},
+		{ "name":"img/iconPoppy/move7.png","primitive":"behave_punch"},
+		{ "name":"img/iconPoppy/move4.png","primitive":"behave_handsdown"},
+		{ "name":"img/iconPoppy/move8.png","primitive":"behave_plane"},
+		{ "name":"img/iconPoppy/move9.png","primitive":"behave_harden"},
+		{ "name":"img/iconPoppy/move2.png","primitive":"behave_dabright"},
+		{ "name":"img/iconPoppy/move1.png","primitive":"behave_dableft"}
+	]
+}

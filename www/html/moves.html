@@ -1,0 +1,29 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="Weather" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="secondary">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-item ng-repeat="x in primitives" ng-click="run_move($index)">
+                {{x}}
+            </ion-item>
+
+        </ion-list>
+
+
+
+    </ion-content>
+</ion-view>

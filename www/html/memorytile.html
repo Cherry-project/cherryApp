@@ -1,0 +1,49 @@
+<ion-view title="{{navTitle}}" class="ViewHeight" >
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="Avatar" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="viewHeight" >
+        <h1 class="Welcoming-title">Bienvenue sur le jeu des cases mémoires</h1>
+
+
+        <div class="content">
+            <div class="container levelSelection">
+
+                <button class="button button-balanced levelList" ng-click="loadLevel(1)" >Level 1 - Facile (3 x 2)</button>
+
+                <button class="button button-energized levelList" ng-click="loadLevel(2)">Level 2 - Moyen (4 x 3)</button>
+
+                <button class="button button-assertive levelList" ng-click="loadLevel(3)">Level 3 - Difficile (6 x 3)</button>
+
+
+            </div>
+
+            <!-- Grille de jeu -->
+            <div class="tiles container tilesContainer">
+                <div ng-repeat='row in rows' class="row ">
+                    <div ng-repeat='tiles in gameGrid[row] track by $index' class="tile col" ng-click="discoverTile(row,{{$index}})">
+
+                        <img class="tileImg" src="{{tiles}}" ng-show="stateGrid[row][$index]" >
+                        <img class="tileImg" src="img/memory/icon_ionic.png" ng-show="!stateGrid[row][$index]" >
+
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- /.content -->
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="Weather" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <h1 class="Welcoming-title">Bienvenue sur la page des Blagues !</h1>
+
+        <center><div ng-repeat="x in devinettes track by $index" class="item item-text-wrap" ng-show="$index==indexToShow">
+
+            <h1>{{$index}} : {{x}}</h1>
+
+
+        </div>
+        <button class="button button-positive button-large icon ion-arrow-left-a"  ng-click="getPreviousIndex()"></button>
+        <button class="button button-positive button-large icon ion-arrow-right-a" ng-click="getRandomIndex()"></button>
+
+    </center>
+
+
+</ion-content>
+</ion-view>

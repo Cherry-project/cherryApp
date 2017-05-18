@@ -1,0 +1,32 @@
+{
+	"memoryMoves":
+	[
+		"behave_open",
+		"behave_grisou",
+		"behave_applause2",
+		"dance_showlr",
+		"dance_snoop",
+		"dance_nope",
+		"behave_handsup"
+
+	],
+	"avatarMoves":
+	[
+		"behave_open",
+		"behave_grisou",
+		"behave_applause2",
+		"dance_showlr",
+		"dance_snoop",
+		"dance_nope",
+		"behave_handsup"
+	],
+	"calculMoves":
+	[
+		"behave_open",
+		"behave_grisou",
+		"behave_applause2",
+		"behave_handsup",
+		"behave_handsdown"
+
+	]
+}

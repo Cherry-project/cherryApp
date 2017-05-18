@@ -1,0 +1,35 @@
+{
+    "Memory":
+    [
+        "Bravo tu as finis ce niveau",
+        "Incroyable, Quelle rapidité ",
+        "Je suis impressioné",
+        "Tu est très intelligent",
+        "C'est trop facile pour toi ",
+        "Bien joué tu as terminé la grille",
+        "Essaie un autre niveau maintenant ",
+        "Waouh, Tu est super rapide "
+    ],
+    "Calculette":
+    [
+        "Bravo tu as finis ce niveau ",
+        "Essaie un autre niveau maintenant ",
+        "Je suis impressioné",
+        "Waouh, Tu est super rapide ",
+        "Tu es un vrai mathématicien",
+        "Pas mal du tout",
+        " Waouh tu est très fort en maths ",
+        " Incroyable, tu calcule plus vite qu'une calculette !"
+
+    ],
+    "Double_tile":[
+        "Bien joué",
+        "Bravo continue comme ça",
+        "Impressionant",
+        "Tu est très rapide",
+        "Encore quelques cases à trouver",
+        "Joli",
+        "Super",
+        "Génial"
+    ]
+}

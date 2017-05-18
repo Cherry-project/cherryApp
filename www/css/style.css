@@ -1,0 +1,396 @@
+/* Empty. Add your own CSS if you like */
+.weather-home {
+    background-image: url('../img/background/weather-font.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex: 1;
+    flex-direction: column;
+}
+.overlay {
+    padding-top: 5px;
+    background-color: #000000;
+    opacity: 0.5;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast {
+    align-items: center;
+    flex-direction: column;
+}
+
+.bigText {
+    flex: 2;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    color: #FFFFFF;
+}
+
+.mainText {
+    flex: 1;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.ion-ios-gear{
+    color:  #444 !important;
+}
+.input-label {
+    color: #ffffff;
+}
+
+/* Css Avatars */
+.avatar-button {
+    background-color: #FFFFFF;
+    border: none;
+    color: white;
+    padding: 30px 32px;
+}
+
+
+.avatar-button:active {
+    transform: translateY(4px);
+}
+
+.connect-button {
+  background-color: #FFFFFF;
+  border: none;
+  color: white;
+
+}
+
+.connect-button:active {
+    transform: translateY(4px);
+}
+
+input[type="text"] {
+    color: #000000;
+}
+
+.playbutton{
+    float: center;
+    background: #FFFFFF
+}
+.container{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 1%;
+    text-align:center;
+}
+.textAlignLeft{
+    text-align: left;
+}
+
+
+/* ------------------------Css Drag & Drop -------------------------*/
+
+
+.moveTitle {
+    position: relative;
+    left:-5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    width: 120%;
+    height: 20px;
+    transform: skew(-7deg, -4deg);
+    transition-duration: 0.3s;
+}
+.dragImg{
+    padding-top: 0;
+    width:10vh;
+    height:10vh;
+}
+
+
+
+/*    left: 8px;
+    bottom: -16px;*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+[ng-drag] {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+[ng-drag] {
+    width:15.3vh;
+    height: 15.3vh;
+    background:  #599ef5 ;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    margin: 0px;
+    cursor: move;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+}
+ul.draggable-objects:after {
+    display: block;
+    content: "";
+    clear: both;
+    opacity: 1;
+
+}
+.draggable-objects li {
+    float: left;
+    display: block;
+    width: 15vh;
+    height: 11vh;
+    padding-bottom: 15%;
+    padding-left: 20px;
+}
+
+[ng-drag].drag-over {
+    border: solid 1px red;
+}
+[ng-drag].dragging {
+    opacity: 0.5;
+}
+[ng-drop] {
+    background: rgba(255,255, 255, 0.5);
+    text-align: center;
+    height: 17vh;
+    width: 17vh;
+    /*display: block;*/
+    margin: 0px auto;
+    position: relative;
+    border-radius: 18px;
+    -moz-border-radius: 22px;
+    -webkit-border-radius: 22px;
+    border: 6px solid #859684;
+    float: left;
+}
+
+[ng-drop].drag-enter {
+    border: solid 5px red;
+}
+[ng-drop] span.title {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 20px;
+    margin-left: -100px;
+    margin-top: -10px;
+}
+[ng-drop] div {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+/*------------------------------------Css icones de home -----------------------------------*/
+.link__thumbnails__thumbnail {
+    cursor: pointer;
+    float: center;
+    width: 24%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    margin-left:1%;
+    margin-right: 1%;
+    margin-bottom: 15px;
+
+}
+@media only screen and (max-width: 1275px)
+.link__thumbnails__thumbnail {
+    width: 32% !important;
+    max-width: 330px;
+    margin-right: 0 !important;
+}
+.thumbnail__title {
+    position: absolute;
+    text-align: center;
+    left: 8px;
+    bottom: -16px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 70%;
+    height: 65px;
+    transform: skew(-11deg, -4deg);
+    transition-duration: 0.3s;
+}
+
+.thumbnail-img{
+    border-radius: 25px;
+    width: 90%;
+    height: 100%;
+
+}
+
+/*----------------------------- Navbar css------------------------------*/
+.mynavbar{
+    height: 60px !important;
+}
+.bar .button.button-icon:before, .bar .button .icon:before, .bar .button.icon:before, .bar .button.icon-left:before, .bar .button.icon-right:before, .bar button.button-icon:before, .bar button .icon:before, .bar button.icon:before, .bar button.icon-left:before, .bar button.icon-right:before {
+    font-size:50px !important;
+}
+.has-header{
+    top:60px;
+}
+.title{
+
+}
+
+.bar .title {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 60px;
+}
+h1.Welcoming-title {
+    color: white;
+    font-family: 'Baloo', 'Arial';
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    text-shadow: 1px 1px 0 #444;
+    margin: 0.5% 10% 0.5%;
+    text-align: center;
+    background-color: #11c1f3;
+    border-radius: 15px;
+
+}
+
+h2.Robot-name {
+  color: #11c1f3;
+  font-family: 'Baloo', 'Arial';
+  font-size: 30px;
+  text-shadow: 1px 1px 0 #444;
+  padding-left: 30px;
+
+}
+
+h2.User-name {
+  color: #11c1f3;
+  font-family: 'Baloo', 'Arial';
+  font-size: 30px;
+  text-shadow: 1px 1px 0 #444;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* -----------------Calculette----------------------------- */
+
+
+input.result{
+    color:  #444 ;
+}
+
+.none {
+    text-decoration: none;
+    color: blue;
+}
+
+.texte {
+    color: red;
+    text-decoration:none;
+}
+
+.effacer {
+    color: white;
+    background-color: black;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.calcul{
+    float: left;
+    background-color: #88B4FD;
+    height: 200px;
+    width: 593px;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 130px;
+    font-weight: bold;
+    color: white;
+    font-family: Palatino;
+    border-radius: 40px;
+}
+
+
+.resultat {
+    float: left;
+    padding-left: 20px;
+    position: relative;
+
+
+}
+
+.tables {
+    position:absolute;
+    margin-top: 350px;
+    float: left;
+}
+
+.valider {
+    position:absolute;
+    margin-top: 200px;
+    float: left;
+}
+
+.score {
+    position: absolute;
+    float: left;
+    margin-top: 280px;
+    margin-left: 630px;
+    font-size: 40px;
+}
+
+
+
+/* -------------------- Tiles ------------------------*/
+.tileImg{
+    width: 100%;
+    height: 100%;
+}
+.tile{
+    background-color: #dcdee1;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0.5%;
+    width:100%;
+    length:100%;
+}
+.levelList{
+    length:15%;
+    padding-right:3%;
+    padding-left:3%;
+}
+.levelSelection{
+    text-align: center;
+}
+
+.mg__contents {
+    position: relative;
+    padding-bottom: 50%;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+
+.tilesContainer{
+    position: absolute;
+    width: 95vh;
+    left:17%
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

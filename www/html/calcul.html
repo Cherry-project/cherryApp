@@ -1,0 +1,76 @@
+<ion-view title="{{navTitle}}" ng-init="niveau(1)">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="avatar" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="padding">
+        <h1 class="Welcoming-title">Bienvenue sur le jeu de la calculatrice</h1>
+
+        <div class="container">
+            <img src="img/calculatrice/niveau1.png" onmouseover="this.src='img/calculatrice/niveau1_on.png'" onmouseout="this.src='img/calculatrice/niveau1.png'"   ng-click="niveau(1)" />
+            <img src="img/calculatrice/niveau2.png" onmouseover="this.src='img/calculatrice/niveau2_on.png'" onmouseout="this.src='img/calculatrice/niveau2.png'"   ng-click="niveau(2)" />
+            <img src="img/calculatrice/niveau3.png" onmouseover="this.src='img/calculatrice/niveau3_on.png'" onmouseout="this.src='img/calculatrice/niveau3.png'"  ng-click="niveau(3)" />
+            <img src="img/calculatrice/calcul.png" onmouseover="this.src='img/calculatrice/calcul_on.png'" onmouseout="this.src='img/calculatrice/calcul.png'"  ng-click="afficher()" />
+        </div>
+        <div ng-show=show()>
+            <h3>
+                {{level}}
+            </h3>
+            <div class="calcul"> {{nb1_e}} {{operateur_e}} {{nb2_e}} </div>
+
+            <div class="resultat">
+                <h4> Résultat :</h4>
+                <span style="font-size:70px; font-weigth: bold; display:block; width=1500px; height: 1500px; float: left; margin-top:50px; width: 150px;" >{{result_e}} <br />
+                    <input type="button" value="effacer" ng-click="erraze()" style="border:solid 1px black; text-align:center; height:40px; width: 120px; font-size: 28px; margin-top: 50px; "></span>
+                    <input type="button" value="1" ng-click="resultat_enfant(1)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;" /> <input type="button" value="2" ng-click="resultat_enfant(2)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;"> <input type="button" value="3" ng-click="resultat_enfant(3)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px; margin-top:5px;"> <br /> <input type="button" value="4" ng-click="resultat_enfant(4)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;"> <input type="button" value="5" ng-click="resultat_enfant(5)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;">
+                    <input type="button" value="6" ng-click="resultat_enfant(6)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px; margin-top:5px;"> <br />
+                    <input type="button" value="7" ng-click="resultat_enfant(7)" style="margin-top:5px; border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;"> <input type="button" value="8" ng-click="resultat_enfant(8)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px;"> <input type="button" value="9" ng-click="resultat_enfant(9)" style="border:solid 1px black; text-align:center; height:50px; width: 50px; font-size: 38px; "> <br />
+                    <input type="button" value="0" ng-click="resultat_enfant(0)" style="border:solid 1px black; text-align:center; height:50px; width: 157px; font-size: 33px; margin-top:5px; ">
+
+
+                </div>
+                <div class="score">
+                    Score : {{score}} / {{total}}
+                </div>
+
+                <div>
+                    <button  class="button icon-left ion-android-microphone" ng-click="start()"></button>
+                    <button  class="button icon-left ion-checkmark-circled" ng-click="popup(result_e)">Valider</button>
+
+
+                </div>
+
+            </div>
+
+
+            <div ng-show="show2()" >
+                <div style="height:670px ; width: 1000px; border: solid 1px black; margin-left: 28px;">
+                    <p style="margin-top: 2px; margin-left: 2px; box-shadow: 6px 6px 0 black; font-size:70px; font-weigth: bold; display:block;  float: left; background-color: #eeeeee;  height: 130px; width:988px; padding-top: 50px;"> <span style="text-align:center; display: block; height: 50px;">{{calcul}} {{calcultest2}}</span> <br />
+                        <input type="button" ng-click="chainecalcul(1)" value="1" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; margin-top: 20px;"><input type="button" ng-click="chainecalcul(2)" value="2" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" ng-click="chainecalcul(3)" value="3" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" ng-click="chainecalculop(1)" value="+" style="border:solid 1px black; text-align:center; height:100px; width: 218px; font-size: 78px; background-color: #383838; color: white; margin-left: 5px;">
+                        <br />
+                        <input type="button" ng-click="chainecalcul(4)" value="4" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; margin-top: 5px;"><input type="button" ng-click="chainecalcul(5)" value="5" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" ng-click="chainecalcul(6)" value="6" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" value="-" ng-click="chainecalculop(2)" style="border:solid 1px black; text-align:center; height:100px; width: 218px; font-size: 78px; background-color: #383838; color: white; margin-left: 5px;">
+                        <br />
+                        <input type="button" value="7" ng-click="chainecalcul(7)" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; margin-top: 5px;"><input type="button" ng-click="chainecalcul(8)" value="8" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" value="9" ng-click="chainecalcul(9)" style="border:solid 1px black; text-align:center; height:100px; width: 250px; font-size: 78px; margin-left: 5px; "><input type="button" value="*" ng-click="chainecalculop(3)" style="border:solid 1px black; text-align:center; height:100px; width: 218px; font-size: 78px; background-color: #383838; color: white; margin-left: 5px;">
+                        <br />
+                        <input type="button" value="0" ng-click="chainecalcul(0)" style="border:solid 1px black; text-align:center; height:100px; width: 760px; font-size: 78px; margin-left: 5px; margin-top: 5px; "><input type="button" ng-click="chainecalculop(4)" value="/" style="border:solid 1px black; text-align:center; height:100px; width: 218px; font-size: 78px; background-color: #383838; color: white; margin-left: 5px;"><br />
+                        <input type="button" value="Resultat" ng-click="resultat(calcul, calcultest2)" style="border:solid 1px black; text-align:center; height:100px; width: 480px; font-size: 78px; margin-left: 5px; margin-top: 5px; background-color: #383838; color: white; ">  <input type="button" value="effacer" ng-click="effacer()" style="border:solid 1px black; text-align:center; height:100px; width: 480px; font-size: 78px; margin-left: 5px; margin-top: 5px; background-color: #383838; color: white; ">
+                    </p>
+                    <div>
+                    </div>
+
+                </ion-content>
+            </ion-view>
