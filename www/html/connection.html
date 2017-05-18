@@ -1,0 +1,46 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="avatar" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="padding">
+        <h1 class="Welcoming-title">Connecte-toi au robot Poppy !</h1>
+
+        <div class="center">
+
+            <img src="{{avatar}}" class="center" width="150" height="150">
+
+            <h2 class="User-name center" >{{username}}</h2>
+
+        </div>
+        <br></br>
+        <br></br>
+
+        <div ng-repeat=" n in [0,1,2]" class="row" >
+            <div ng-repeat="x in robots_libre" class="wrap col col-top" ng-if="n*4 <= $index && $index < (n+1)*4 ">
+                <button class="connect-button" name="button" >
+                    <img ng-src="img/avatar/pixel.png" width="100%" ng-click="onTap{{$index}}">
+                </button>
+                <h2 class="Robot-name">{{x}}</h2>
+            </div>
+        </div>
+
+
+
+
+    </ion-content>
+
+</ion-view>

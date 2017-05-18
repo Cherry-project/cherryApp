@@ -1,0 +1,68 @@
+{
+    "cards" : [
+        {
+            "id" : 1,
+            "img": "img/memory/monsters-01.png"
+        },
+        {
+            "id" : 2,
+            "img": "img/memory/monsters-02.png"
+        },
+        {
+            "id" : 3,
+            "img": "img/memory/monsters-03.png"
+        },
+        {
+            "id" : 4,
+            "img": "img/memory/pixel-love.png"
+        },
+        {
+            "id" : 5,
+            "img": "img/memory/monsters-05.png"
+        },
+        {
+            "id" : 6,
+            "img": "img/memory/yellow-star.png"
+        },
+        {
+            "id" : 7,
+            "img": "img/memory/monsters-07.png"
+        },
+        {
+            "id" : 8,
+            "img": "img/memory/monsters-08.png"
+        },
+        {
+            "id" : 9,
+            "img": "img/memory/monsters-09.png"
+        },
+        {
+            "id" : 10,
+            "img": "img/memory/monsters-10.png"
+        },
+        {
+            "id" : 11,
+            "img": "img/memory/monsters-11.png"
+        },
+        {
+            "id" : 12,
+            "img": "img/memory/monsters-12.png"
+        },
+        {
+            "id" : 13,
+            "img": "img/memory/monsters-13.png"
+        },
+        {
+            "id" : 14,
+            "img": "img/memory/monsters-14.png"
+        },
+        {
+            "id" : 15,
+            "img": "img/memory/monsters-15.png"
+        },
+        {
+            "id" : 16,
+            "img": "img/memory/monsters-16.png"
+        }
+    ]
+}

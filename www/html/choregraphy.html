@@ -1,0 +1,117 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="Weather" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="padding">
+
+        <h1 class="Welcoming-title">Bienvenue sur le jeu de la chorégraphie !</h1>
+        <div class="container">
+            <p>
+                <h2 class="textAlignLeft">Choisis ta musique</h3>
+                <button class="button button-positive" ng-disabled="music1Disabled" ng-click="setMusic1()">Magic system - Magic in the air</button>
+                <button class="button button-positive" ng-disabled="music2Disabled" ng-click="setMusic2()">Rihanna ft Drake - Work</button>
+                <button class="button button-positive" ng-disabled="music3Disabled" ng-click="setMusic3()">Shake it off - Taylor Swift</button>
+                <button class="button button-positive" ng-disabled="music4Disabled" ng-click="setMusic4()">50 cent - In da club</button>
+            </p>
+
+            <p>
+                <h2 class="textAlignLeft">Choisis tes mouvements et fait danser poppy !</h2>
+                <!-- Drag and Drop -->
+                <div>
+                    <!-- Draggable objects -->
+                    <ul class="draggable-objects">
+                        <div ng-repeat='move in moves'>
+                            <li ng-if="true" style="margin-left:10px;">
+                                <div ng-drag="true" ng-drag-data="{{move}}" data-allow-transform="true">
+                                    <img ng-src="{{move.name}}" class="dragImg">
+                                    <div class="moveTitle">{{move.primitive.split("_")[1]}}</div>
+
+                                </div>
+
+                            </li>
+                        </div>
+                    </ul>
+
+                </div>
+
+                <!-- Dropzones -->
+                <div class="row">
+                    <div class="col">
+                        <div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+                            <span class="title">Move #1</span>
+                            <div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}" class="dropObj" >
+                                <img ng-src="{{obj.name}}" width="80" height="80"class="droppedObj">
+                                <div class="moveTitle">{{obj.primitive.split("_")[1]}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div ng-drop="true" ng-drop-success="onDropComplete2($data,$event)">
+                            <span class="title">Move #2</span>
+
+                            <div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)" ng-center-anchor="{{centerAnchor}}" class="dropObj">
+                                <img ng-src="{{obj.name}}" width="80" height="80" class="droppedObj">
+                                <div class="moveTitle">{{obj.primitive.split("_")[1]}}</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div ng-drop="true" ng-drop-success="onDropComplete3($data,$event)">
+                            <span class="title">Move #3</span>
+
+                            <div ng-repeat="obj in droppedObjects3" ng-drag="true" ng-drag-data="obj"ng-drag-success="onDragSuccess3($data,$event)" ng-center-anchor="{{centerAnchor}}">
+                                <img ng-src="{{obj.name}}" width="80" height="80">
+                                <div class="moveTitle">{{obj.primitive.split("_")[1]}}</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div ng-drop="true" ng-drop-success="onDropComplete4($data,$event)">
+                            <span class="title">Move #4</span>
+
+                            <div ng-repeat="obj in droppedObjects4" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess4($data,$event)" ng-center-anchor="{{centerAnchor}}">
+                                <img ng-src="{{obj.name}}" width="80" height="80">
+                                <div class="moveTitle">{{obj.primitive.split("_")[1]}}</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Play button -->
+                    <div class="col">
+                        <button class="button center playbutton"  ng-click="playAudio()">
+                            <img border="0" alt="PlayButton" ng-src="{{playingButtonImg}}" width="98" height="98">
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </p>
+        </div>
+
+
+    </ion-content>
+</ion-view>

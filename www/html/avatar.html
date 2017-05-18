@@ -1,0 +1,35 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="avatar" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showHelp()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="padding">
+        <h1 class="Welcoming-title">Bienvenue sur la page de séléction de ton Avatar !</h1>
+
+
+        <div ng-repeat=" n in [0,1,2,3,4,5]" class="row" >
+            <div ng-repeat="avatar in avatars" class="col col-top" ng-if="n*10 <= $index && $index < (n+1)*10 ">
+                <button class="avatar-button" name="button" ng-click="showAlert()">
+                    <img id="{{$index}}" ng-src={{avatar}} width="125%" ng-click="onTap({{$index}})" ng-model='imageAvatar' >
+                </button>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,66 @@
+<ion-view title="{{navTitle}}">
+
+    <!--Nav Buttons left-->
+    <ion-nav-buttons side="left">
+        <button class="button button-small button-icon icon ion-ios-home" onclick="window.location.href='#/home'"></button>
+        <button class="button button-small button-icon" onclick="window.location.href='#/avatar'">
+            <img border="0" alt="Weather" src="{{avatar}}"  width="50" height="50">
+        </button>
+    </ion-nav-buttons>
+
+    <!--Nav Buttons right-->
+    <ion-nav-buttons side="right">
+        <button class="button button-small button-icon icon ion-help" ng-click="showAlert()"></button>
+        <button class="button button-small button-icon icon ion-ios-gear" onclick="window.location.href='#/account'"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content class="padding">
+
+        <h1 class="Welcoming-title">Bienvenue sur le jeu 4 images un mot !</h1>
+        <div class="container" style="text-align:center;">
+            <p>
+                <h3>Images :</h3>
+                <img ng-src="img/4p1w/1_{{level}}.jpg" style="width:200px; heigth: 200px; border:1px double black;"/>
+                <img ng-src="img/4p1w/2_{{level}}.jpg" style="width:200px; heigth: 200px; border:1px double black;"/>
+                <br />
+                <img ng-src="img/4p1w/3_{{level}}.jpg" style="width:200px; heigth: 200px; border:1px double black;"/>
+                <img ng-src="img/4p1w/4_{{level}}.jpg" style="width:300px; heigth: 200px; border:1px double black;"/>
+
+            </p>
+
+            <p>
+
+                <h3 style="text-align:left; margin-left:20px;" >Mot à trouver:</h3>
+
+                <div ng-repeat="i in getNumber(mot_a_trouver[level-1].length) track by $index">
+                    <div ng-drop="true" ng-drop-success="onDropComplete1($data,$event,$index+1)" >
+
+
+
+                        <div ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}" style="font-size:75px; background-color: white; color: black; padding-top: 25px; ">{{test[$index+1]}} </div>
+
+                    </div>
+                </div>
+
+                <img src="img/4p1w/valider.jpg" href="" ng-click="valider(test)" />
+
+
+
+                <h3>Lettres disponible :</h3>
+
+                <ul class="draggable-objects">
+                    <li  ng-repeat="i in getNumber(lettres.length-1) track by $index" style="margin-left:10px;">
+                        <div ng-drag="true" ng-drag-data="lettres[$index+1]" data-allow-transform="true" style="font-size:75px; text-align:center; padding-top:25px;"> {{lettres[$index+1]}} </div>
+                    </li>
+                </ul>
+
+
+
+
+            </p>
+        </div>
+
+
+    </ion-content>
+</ion-view>

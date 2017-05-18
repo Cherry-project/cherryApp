@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "cordova-plugin-speechrecognition": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "cordova-plugin-tts": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "org.apache.cordova.speech.speechrecognition": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.appfinale894573"
+        }
+    }
+}
